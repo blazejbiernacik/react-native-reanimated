@@ -276,7 +276,7 @@
       [strongSelf.uiManager setNeedsLayout];
     });
     if (trySynchronously) {
-      dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+      dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 100000000));
     }
 
     if (_mounting) {
